@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Log In Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <article class="wrapper" id="login">
+
+    <section>
+      <ul class="error">
+        {{#errors}}
+          <li>{{msg}}</li>
+        {{/errors}}
+      </ul>
+
+      <form id="input" action="/login" method="post">
+        <input class="input " type="text" name="username" placeholder="Username" value="">
+        <input class="input" type="password" name="password" placeholder="Password" value="">
+        <input class="button" type="submit" name="" value="login">
+        <!-- <button type="button">Submit</button> -->
+      </form>
+
+      <div id="notauser" class="error">
+      {{notausermessage}}
+      </div>
+    </section>
+
+  </article>
+</body>
+
+</html>
